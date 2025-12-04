@@ -29,9 +29,9 @@
 <body class="font-sans min-h-screen flex flex-col">
 
     <!-- MODALS for Cart and Wishlist -->
-    <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden justify-center items-center p-4 sm:p-6">
+    <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
         <!-- Cart Modal -->
-        <div id="cart-modal" class="bg-bg-cream rounded-xl shadow-2xl w-full max-w-sm sm:max-w-lg h-auto max-h-[85vh] sm:max-h-[80vh] p-4 sm:p-6 transform scale-95 opacity-0 transition-all duration-300 flex flex-col">
+        <div id="cart-modal" class="fixed inset-0 md:inset-auto md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 bg-bg-cream rounded-t-3xl md:rounded-xl shadow-2xl w-full md:w-full md:max-w-lg h-[90vh] md:h-auto md:max-h-[85vh] p-4 sm:p-6 transform scale-95 opacity-0 transition-all duration-300 flex flex-col">
             <div class="flex justify-between items-center border-b pb-3 mb-4 flex-shrink-0">
                 <h2 class="text-xl sm:text-2xl font-serif text-primary-dark">Your Shopping Cart</h2>
                 <button onclick="hideModal('cart-modal')" class="text-gray-500 hover:text-primary-dark transition flex-shrink-0">
@@ -52,7 +52,7 @@
         </div>
 
         <!-- Wishlist Modal -->
-        <div id="wishlist-modal" class="bg-bg-cream rounded-xl shadow-2xl w-full max-w-sm sm:max-w-lg h-auto max-h-[85vh] sm:max-h-[80vh] p-4 sm:p-6 transform scale-95 opacity-0 transition-all duration-300 flex flex-col">
+        <div id="wishlist-modal" class="fixed inset-0 md:inset-auto md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 bg-bg-cream rounded-t-3xl md:rounded-xl shadow-2xl w-full md:w-full md:max-w-lg h-[90vh] md:h-auto md:max-h-[85vh] p-4 sm:p-6 transform scale-95 opacity-0 transition-all duration-300 flex flex-col">
             <div class="flex justify-between items-center border-b pb-3 mb-4 flex-shrink-0">
                 <h2 class="text-xl sm:text-2xl font-serif text-primary-dark">Your Wishlist</h2>
                 <button onclick="hideModal('wishlist-modal')" class="text-gray-500 hover:text-primary-dark transition flex-shrink-0">
@@ -163,8 +163,8 @@
             <div>
                 <h3 class="text-xl font-serif text-accent-gold mb-4">ALOK DAS</h3>
                 <p class="text-sm">Women's Bespoke Couture</p>
-                <p class="text-sm mt-2">alokcoc4256@gmail.com</p>
-                <p class="text-sm">+91 8638694325</p>
+                <p class="text-sm mt-2">support@alokdas.com</p>
+                <p class="text-sm">+91 98765 43210</p>
             </div>
             <div>
                 <h3 class="text-lg font-bold mb-4">Support</h3>
@@ -367,21 +367,21 @@
 
                 wishlist.forEach(item => {
                     const itemDiv = document.createElement('div');
-                    itemDiv.className = 'flex items-center space-x-4 p-3 bg-white rounded-lg shadow-sm border border-gray-100';
+                    itemDiv.className = 'flex items-center gap-2 sm:gap-4 p-2 sm:p-3 bg-white rounded-lg shadow-sm border border-gray-100 text-sm sm:text-base';
                     itemDiv.innerHTML = `
-                        <div class="w-16 h-16 bg-gradient-to-br from-gray-200 to-gray-300 rounded-md flex items-center justify-center">
-                            <span class="text-xs text-gray-600 text-center px-2">${item.title}</span>
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-gray-200 to-gray-300 rounded-md flex-shrink-0 flex items-center justify-center">
+                            <span class="text-xs text-gray-600 text-center px-1">${item.title}</span>
                         </div>
-                        <div class="flex-grow">
-                            <h4 class="font-serif text-primary-dark">${item.title}</h4>
-                            <p class="text-sm text-gray-500">${item.category}</p>
+                        <div class="flex-grow min-w-0">
+                            <h4 class="font-serif text-primary-dark truncate">${item.title}</h4>
+                            <p class="text-xs sm:text-sm text-gray-500">${item.category}</p>
                         </div>
-                        <span class="font-bold text-accent-gold">₹${item.price.toLocaleString('en-IN')}</span>
-                        <button onclick="toggleWishlist('${item.id}')" class="text-red-600 hover:text-red-800 p-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                        <span class="font-bold text-accent-gold flex-shrink-0">₹${item.price.toLocaleString('en-IN')}</span>
+                        <button onclick="toggleWishlist('${item.id}')" class="text-red-600 hover:text-red-800 p-1 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" sm:width="18" sm:height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 6 6 18M6 6l12 12"/></svg>
                         </button>
-                        <button onclick="moveWishlistToCart('${item.id}')" class="text-primary-dark hover:text-accent-gold p-2 rounded-full bg-gray-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+                        <button onclick="moveWishlistToCart('${item.id}')" class="text-primary-dark hover:text-accent-gold p-1 sm:p-2 rounded-full bg-gray-100 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" sm:width="18" sm:height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
                         </button>
                     `;
                     container.appendChild(itemDiv);
