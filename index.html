@@ -994,7 +994,7 @@
     </div>
 
     <audio id="bgMusic" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <source src="Tomake Chai.mp3" type="audio/mpeg">
     </audio>
 
     <script>
@@ -1146,10 +1146,17 @@
         const music = document.getElementById('bgMusic');
         const musicBtn = document.getElementById('musicBtn');
         const musicIcon = document.getElementById('musicIcon');
+
         musicBtn.addEventListener('click', () => {
-            if (music.paused) { music.play(); musicIcon.innerText = '🔊'; }
-            else { music.pause(); musicIcon.innerText = '🔇'; }
+            if (music.paused) {
+                music.play();
+                musicIcon.innerText = '🔊';
+            } else {
+                music.pause();
+                musicIcon.innerText = '🔇';
+            }
         });
+
 
         // 8. One-Time Scroll Surprise
         window.addEventListener('scroll', () => {
