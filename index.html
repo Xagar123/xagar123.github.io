@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!--
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,9 +29,9 @@
 </head>
 <body class="font-sans min-h-screen flex flex-col">
 
-    <!-- MODALS for Cart and Wishlist -->
+    
     <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-        <!-- Cart Modal -->
+     
         <div id="cart-modal" class="fixed inset-0 md:inset-auto md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 bg-bg-cream rounded-t-3xl md:rounded-xl shadow-2xl w-full md:w-full md:max-w-lg h-[90vh] md:h-auto md:max-h-[85vh] p-4 sm:p-6 transform scale-95 opacity-0 transition-all duration-300 flex flex-col">
             <div class="flex justify-between items-center border-b pb-3 mb-4 flex-shrink-0">
                 <h2 class="text-xl sm:text-2xl font-serif text-primary-dark">Your Shopping Cart</h2>
@@ -51,7 +52,7 @@
             </div>
         </div>
 
-        <!-- Wishlist Modal -->
+       
         <div id="wishlist-modal" class="fixed inset-0 md:inset-auto md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 bg-bg-cream rounded-t-3xl md:rounded-xl shadow-2xl w-full md:w-full md:max-w-lg h-[90vh] md:h-auto md:max-h-[85vh] p-4 sm:p-6 transform scale-95 opacity-0 transition-all duration-300 flex flex-col">
             <div class="flex justify-between items-center border-b pb-3 mb-4 flex-shrink-0">
                 <h2 class="text-xl sm:text-2xl font-serif text-primary-dark">Your Wishlist</h2>
@@ -67,7 +68,7 @@
         </div>
     </div>
 
-    <!-- HEADER -->
+    
     <header class="sticky top-0 z-40 bg-bg-cream shadow-md border-b border-gray-100">
         <div class="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex justify-between items-center gap-3">
             <div class="flex flex-col items-center flex-shrink-0">
@@ -102,10 +103,10 @@
     </header>
 
     <main class="flex-grow">
-        <!-- Banner Section -->
+       
         <section id="banner-slider" class="relative w-full overflow-hidden h-96 md:h-[60vh] bg-primary-dark">
             <div id="slides-container" class="flex h-full transition-transform duration-500 ease-in-out">
-                <!-- Slide 1 -->
+              
                 <div class="slide flex-shrink-0 w-full h-full relative"
                     style="background-image: url('images/firstb1.png'); background-size: cover; background-position: center;">
                     <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
@@ -115,7 +116,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 2 -->
+                
                 <div class="slide flex-shrink-0 w-full h-full relative"
                     style="background-image: url('images/banner1.png'); background-size: cover; background-position: center;">
                     <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
@@ -125,7 +126,7 @@
                     </div>
                 </div>
 
-                <!-- Slide 3 -->
+               
                 <div class="slide flex-shrink-0 w-full h-full relative"
                     style="background-image: url('images/banner2.png'); background-size: cover; background-position: center;">
                     <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
@@ -138,7 +139,7 @@
             <div id="banner-dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"></div>
         </section>
 
-        <!-- Women's Wear Section -->
+      
         <section class="py-8 sm:py-12 px-3 sm:px-4 md:px-8">
             <h2 class="text-2xl sm:text-3xl font-serif text-primary-dark mb-4 sm:mb-6 border-b-2 border-accent-gold inline-block pb-1">Women's Wear</h2>
             <div class="overflow-x-auto pb-4">
@@ -147,7 +148,7 @@
             </div>
         </section>
 
-        <!-- Accessories Section -->
+       
         <section class="py-8 sm:py-12 px-3 sm:px-4 md:px-8 bg-gray-50">
             <h2 class="text-2xl sm:text-3xl font-serif text-primary-dark mb-4 sm:mb-6 border-b-2 border-primary-dark inline-block pb-1">Accessories</h2>
             <div class="overflow-x-auto pb-4">
@@ -157,7 +158,7 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
+  
     <footer class="bg-primary-dark text-bg-cream py-10 mt-12">
         <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
@@ -455,6 +456,366 @@
 
             goToSlide(0);
         });
+    </script>
+</body>
+</html> 
+-->
+
+
+<!-- new code for valentineday -->
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day ❤️</title>
+    <style>
+        :root {
+            --primary-red: #ff4b2b;
+            --secondary-red: #ff416c;
+            --soft-pink: #ffdde1;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--secondary-red), var(--primary-red));
+            color: var(--white);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 40px 20px;
+            z-index: 10;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            margin-bottom: 10px;
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        /* --- SHARED FLIP CARD STYLES --- */
+        .card-perspective {
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 20px;
+        }
+
+        .card-perspective.is-flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+        }
+
+        .card-front {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .card-back {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(15px);
+            transform: rotateY(180deg);
+        }
+
+        /* --- MAIN HERO CARD --- */
+        .hero-card {
+            width: 320px;
+            height: 450px;
+            margin: 40px auto;
+        }
+
+        .hero-card .back-photo {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            background: var(--soft-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .message-text {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        /* --- GALLERY GRID --- */
+        .gallery-title {
+            margin-top: 60px;
+            font-size: 2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            width: 100%;
+        }
+
+        .memory-card {
+            height: 280px;
+        }
+
+        .memory-card .card-front svg {
+            opacity: 0.8;
+            transition: transform 0.3s ease;
+        }
+
+        .memory-card:hover .card-front svg {
+            transform: scale(1.2);
+        }
+
+        .memory-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .memory-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 8px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Floating Hearts */
+        .heart-float {
+            position: fixed;
+            bottom: -50px;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1;
+            animation: floatUp linear forwards;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 40px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .hint {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Happy Valentine's Day ❤️</h1>
+        <p class="subtitle">Tomake chara amar duniya ta asompurno 💕</p>
+
+        <!-- MAIN INTERACTIVE CARD -->
+        <div class="card-perspective hero-card" onclick="flipCard(this)">
+            <div class="card-inner">
+                <div class="card-front">
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <div class="hint">Click to open your surprise 😘</div>
+                </div>
+                <div class="card-back">
+                    <div class="back-photo">
+                        <img src="images/SB5.jpg" class="memory-photo">
+                        <span style="font-size: 40px;">💑</span>
+                    </div>
+                    <div class="message-text">
+                        Tumi amar shobcheye boro happiness ❤️ <br>
+                        Amar shanti, amar hashi, <br>
+                        amar shob kichu 💖 <br><br>
+                        <strong>I Love You Forever 💘</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="gallery-title">Our Memory Cards ✨</h2>
+        
+        <div class="gallery">
+            <!-- Memory Card 1 -->
+            <div class="card-perspective memory-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <span style="font-size: 40px;">📸</span>
+                        <div class="hint">Memory 1</div>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/SB1.jpg" class="memory-photo"> 
+                        <div style="background: var(--soft-pink); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 50px;">❤️</span>
+                        </div>
+                        <div class="memory-caption">Oi sundor din ta... 🌹</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory Card 2 -->
+            <div class="card-perspective memory-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <span style="font-size: 40px;">🎬</span>
+                        <div class="hint">Memory 2</div>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/SB2.jpg" class="memory-photo"> 
+                        <div style="background: var(--soft-pink); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 50px;">✨</span>
+                        </div>
+                        <div class="memory-caption">Tomar oi mishti hashi 💖</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory Card 3 -->
+            <div class="card-perspective memory-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <span style="font-size: 40px;">🗺️</span>
+                        <div class="hint">Memory 3</div>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/SB3.jpg" class="memory-photo"> 
+                        <div style="background: var(--soft-pink); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 50px;">🌟</span>
+                        </div>
+                        <div class="memory-caption">Eksathe chola... 👣</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory Card 4 -->
+            <div class="card-perspective memory-card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <span style="font-size: 40px;">🎁</span>
+                        <div class="hint">Memory 4</div>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/SB4.jpg" class="memory-photo">
+                        <div style="background: var(--soft-pink); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 50px;">💎</span>
+                        </div>
+                        <div class="memory-caption">Amader shobcheye priyo muhurto 💍</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Made with ❤️ just for you
+    </footer>
+
+    <script>
+        function flipCard(element) {
+            const isFlipped = element.classList.toggle("is-flipped");
+            
+            if (isFlipped) {
+                // Heart burst on flip
+                const count = element.classList.contains('hero-card') ? 25 : 10;
+                for(let i=0; i<count; i++) {
+                    setTimeout(createHeart, i * 60);
+                }
+            }
+        }
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart-float";
+            
+            const hearts = ["❤️", "💖", "💝", "💕", "💗", "🌸", "💌"];
+            heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+            
+            const startPos = Math.random() * window.innerWidth;
+            const size = Math.random() * 20 + 15;
+            const duration = Math.random() * 3 + 4;
+            
+            heart.style.left = startPos + "px";
+            heart.style.fontSize = size + "px";
+            heart.style.animationDuration = duration + "s";
+            heart.style.opacity = Math.random() * 0.5 + 0.5;
+            
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, duration * 1000);
+        }
+
+        // Ambient background hearts
+        setInterval(createHeart, 1000);
     </script>
 </body>
 </html>
